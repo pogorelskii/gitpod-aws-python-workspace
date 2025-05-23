@@ -69,6 +69,8 @@ tasks:
   installPythonPackages:
     name: Install Python Packages
     description: Installs development and AWS-related Python packages
+    triggeredBy:
+      - postDevcontainerStart
     command: |
       echo "Starting Python package installation..."
 
