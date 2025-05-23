@@ -65,3 +65,17 @@ tasks:
         exit 1
       fi
       git config --global user.name "$GIT_USER_NAME" || { echo "Failed to set Git name"; exit 1; }
+  
+  installPythonPackages:
+    name: Install Python Packages
+    description: Installs development and AWS-related Python packages
+    command: |
+      echo "Starting Python package installation..."
+
+      echo "Step 1: Installing Black (code formatter)..."
+      pip install black || { echo "Failed to install Black"; exit 1; }
+
+      echo "Step 2: Installing boto3 with CRT support..."
+      pip install 'boto3[crt]' || { echo "Failed to install boto3[crt]"; exit 1; }
+
+      echo "Python packages installed successfully."

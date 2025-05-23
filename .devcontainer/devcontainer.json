@@ -1,21 +1,8 @@
-// The Dev Container format allows you to configure your environment. At the heart of it
-// is a Docker image or Dockerfile which controls the tools available in your environment.
-//
-// See https://aka.ms/devcontainer.json for more information.
 {
   "name": "Gitpod",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
-  // instead of the build to use a pre-built image.
+  "image": "mcr.microsoft.com/devcontainers/python:3.13",
 
   "containerEnv": {
     "AWS_CLI_AUTO_PROMPT": "on-partial"
   }
-
-  // Features add additional features to your environment. See https://containers.dev/features
-  // Beware: features are not supported on all platforms and may have unintended side-effects.
-  // "features": {
-  //   "ghcr.io/devcontainers/features/docker-in-docker": {
-  //     "moby": false
-  //   }
-  // }
 }
