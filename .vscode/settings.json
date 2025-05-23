@@ -7,5 +7,5 @@
     ".gitignore", // this will ignore anything the node_modules directory
     ".git" // Ignore the .git directory
   ],
-  "cSpell.words": ["devcontainers"]
+  "cSpell.words": ["devcontainers", "boto3", "awscli", "awsliv"]
 }
