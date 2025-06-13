@@ -16,9 +16,10 @@ These secrets enable authentication with AWS services and configure Git user inf
 
 ## Features
 
-- Installs and configures AWS CLI automatically  
-- Installs Python packages including `boto3` for AWS SDK usage  
-- Provides ready-to-use environment for AWS development with Python
+- Installs and configures AWS CLI automatically
+- Installs Python packages including boto3 for AWS SDK usage
+- Installs Terraform and AWS CDK for infrastructure-as-code workflows
+- Provides a ready-to-use environment for AWS development with Python and IaC tools
 
 ## Usage
 
