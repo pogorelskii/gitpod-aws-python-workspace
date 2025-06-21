@@ -1,7 +1,13 @@
 {
   "name": "Gitpod",
-  "build": {
-    "dockerfile": "Dockerfile"
+  "image": "mcr.microsoft.com/devcontainers/python:3",
+  // https://containers.dev/features
+  "features": {
+    "ghcr.io/devcontainers-extra/features/npm-package:1": {},
+    "ghcr.io/devcontainers/features/node:1": {},
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {},
+    "ghcr.io/devcontainers/features/aws-cli:1": {},
+    "ghcr.io/devcontainers/features/powershell:1": {}
   },
   "containerEnv": {
     "AWS_CLI_AUTO_PROMPT": "on-partial"

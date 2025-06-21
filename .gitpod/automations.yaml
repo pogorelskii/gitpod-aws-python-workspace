@@ -1,11 +1,19 @@
 tasks:
-  setupAwsCli:
-    name: Install and Login to AWS CLI
-    description: Installs AWS CLI and configures credentials
+  setupAwsSamCli:
+    name: Install AWS SAM CLI
+    description: Installs AWS SAM CLI
     triggeredBy:
       - postDevcontainerStart
     command: |
-      ./bin/aws_cli_install.sh
+      ./bin/aws_sam_cli_install.sh
+
+  configureAwsCredentials:
+    name: Configure AWS Credentials
+    description: Sets up AWS credentials
+    triggeredBy:
+      - postDevcontainerStart
+    command: |
+      ./bin/aws_credentials.sh
       
   configureGit:
     name: Configure Git User Settings
@@ -22,14 +30,6 @@ tasks:
       - postDevcontainerStart
     command: |
       ./bin/python_sdk_install.sh
-
-  installPowerShell:
-    name: Install PowerShell
-    description: Installs PowerShell and AWS Tools for PowerShell
-    triggeredBy:
-      - postDevcontainerStart
-    command: |
-      ./bin/powershell_cli_install.sh
 
   installTerraform:
     name: Install Terraform
